@@ -1,10 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import ApplicationViews from './components/ApplicationViews';
 
 function App() {
   return (
-"Hello World"
+    <>
+    <Router>
+      <ApplicationViews/>
+    </Router>
+    </>
   )
 }
 
