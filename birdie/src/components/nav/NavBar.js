@@ -10,26 +10,33 @@ const NavBar = (props) => {
     <>
       <div id="navDiv">
         <nav>
+
           <Link to="/">Home</Link>
           {isAuthenticated() ? (
-            <>
+            <div>
+              <>
               <Link
                 onClick={() => {
-                  logout();
+                    logout();
                 }}
                 to="/"
-              >
+                >
                 Log Out
               </Link>{" "}
             </>
+              </div>
           ) : (
-            <>
+              <>
+              <div>
               <Link to="/login">Log In</Link>
+              </div>
+              <div>
               <Link to="/register">Register</Link>
+              </div>
             </>
           )}
         </nav>
-        </div>
+          </div>
         </>
   );
 };
