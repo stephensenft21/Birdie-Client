@@ -8,7 +8,7 @@ const useSimpleAuth = () => {
     const isAuthenticated = () =>
         loggedIn || sessionStorage.getItem("birdie-token") !== null
 
-    const register = registrationInfo => {
+    const register = registerInfo => {
         return AuthManager.registerUser(registerInfo)
             .then(parsedResponse => {
                 if ("token" in parsedResponse) {

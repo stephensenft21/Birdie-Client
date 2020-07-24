@@ -98,3 +98,5 @@ const Register = (props) => {
     </div>
     )
 }
+
+export default Register
