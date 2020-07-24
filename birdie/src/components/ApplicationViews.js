@@ -1,3 +1,8 @@
+import React from "react";
+import { Route } from "react-router-dom";
+import Register from "./auth/Register"
+import useSimpleAuth from "./auth/useSimpleAuth"
+
 const ApplicationViews = (props) => {
     const { isAuthenticated } = useSimpleAuth();
 
@@ -5,9 +10,9 @@ const ApplicationViews = (props) => {
         <>
             <Route
                 exact
-                path="/"
+                path="/register"
                 render={(props) => {
-                    return <Home {...props} />;
+                    return <Register {...props} />;
                 }}
             />
         </>

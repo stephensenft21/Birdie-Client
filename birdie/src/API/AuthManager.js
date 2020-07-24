@@ -1,8 +1,8 @@
-const AuthApiUrl = "http://localhost:8000"
+const AuthApiUrl = "http://localhost:8088"
 
 export default {
     registerUser(newUser) {
-        return fetch(`${AuthApiUrl}/register`, {
+        return fetch(`${AuthApiUrl}/users`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -13,13 +13,13 @@ export default {
         .then(response => response.json())
     },
     loginUser(newCreds) {
-        return fetch(`${authApiUrl}/login`, {
+        return fetch(`${AuthApiUrl}/login`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
               "Accept": "application/json"
             },
-            body: JSON.stringify(userCreds)
+            body: JSON.stringify(newCreds)
           })
             .then(response => response.json())
     }
