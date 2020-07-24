@@ -1,0 +1,265 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "FirstName": "Teddie",
+      "LastName": "Blank",
+      "UserName": "Blank",
+      "email": "Billy@gmail.com",
+      "is_active": true,
+      "password": "1234"
+    },
+    {
+      "id": 2,
+      "FirstName": "Read",
+      "LastName": "Blank",
+      "UserName": "Blank",
+      "email": "remlen1@amazon.co.uk",
+      "is_active": true,
+      "password": "UhYnUpV9"
+    },
+    {
+      "id": 3,
+      "FirstName": "Bren",
+      "LastName": "Blank",
+      "UserName": "Blank",
+      "email": "bslot2@weather.com",
+      "is_active": true,
+      "password": "M7LoArXbD"
+    },
+    {
+      "id": 4,
+      "FirstName": "Sheff",
+      "LastName": "Blank",
+      "UserName": "Blank",
+      "email": "sorrill3@bloglines.com",
+      "is_active": true,
+      "password": "HuYYXov"
+    },
+    {
+      "id": 5,
+      "FirstName": "Walden",
+      "LastName": "Blank",
+      "UserName": "Blank",
+      "email": "wmosby4@prlog.org",
+      "is_active": true,
+      "password": "cJCOHzr7"
+    },
+    {
+      "id": 6,
+      "FirstName": "Andreana",
+      "LastName": "Blank",
+      "UserName": "Blank",
+      "email": "amcgarvey5@histats.com",
+      "is_active": true,
+      "password": "yBoitrXyiM"
+    },
+    {
+      "id": 7,
+      "FirstName": "Irwin",
+      "LastName": "Blank",
+      "UserName": "Blank",
+      "email": "iarens6@phoca.cz",
+      "is_active": true,
+      "password": "FdLZMQdkNVU"
+    },
+    {
+      "id": 8,
+      "FirstName": "Ivonne",
+      "LastName": "Blank",
+      "UserName": "Blank",
+      "email": "ihuddart7@xinhuanet.com",
+      "is_active": true,
+      "password": "i2g1D0g"
+    },
+    {
+      "id": 9,
+      "FirstName": "Aliza",
+      "LastName": "Blank",
+      "UserName": "Blank",
+      "email": "afermer8@fc2.com",
+      "is_active": true,
+      "password": "dvCC2uo"
+    },
+    {
+      "id": 10,
+      "FirstName": "Kelley",
+      "LastName": "Blank",
+      "UserName": "Blank",
+      "email": "kphilippou9@washingtonpost.com",
+      "is_active": true,
+      "password": "JvYB6u6Y"
+    },
+    {
+      "id": 11,
+      "FirstName": "Cullin",
+      "LastName": "Blank",
+      "UserName": "Blank",
+      "email": "cairda@columbia.edu",
+      "is_active": true,
+      "password": "fZ28Bs0L5u"
+    },
+    {
+      "id": 12,
+      "FirstName": "Sissy",
+      "LastName": "Blank",
+      "UserName": "Blank",
+      "email": "sgentyb@noaa.gov",
+      "is_active": true,
+      "password": "jwasvODoqJM"
+    },
+    {
+      "id": 13,
+      "FirstName": "Stirling",
+      "LastName": "Blank",
+      "UserName": "Blank",
+      "email": "srogeonc@uol.com.br",
+      "is_active": true,
+      "password": "8j9vBDAXB1"
+    },
+    {
+      "id": 14,
+      "FirstName": "Alford",
+      "LastName": "Blank",
+      "UserName": "Blank",
+      "email": "awheaterd@t.co",
+      "is_active": true,
+      "password": "KORsyUtMLh"
+    },
+    {
+      "id": 15,
+      "FirstName": "Farlay",
+      "LastName": "Blank",
+      "UserName": "Blank",
+      "email": "fcosense@comcast.net",
+      "is_active": true,
+      "password": "9MYLzy"
+    },
+    {
+      "FirstName": "Teddie",
+      "LastName": "Blank",
+      "UserName": "Blank",
+      "email": "Billy@gmail.com",
+      "is_active": true,
+      "password": "1234",
+      "id": 16
+    },
+    {
+      "FirstName": "Teddie",
+      "LastName": "Blank",
+      "UserName": "Blank",
+      "email": "Billy@gmail.com",
+      "is_active": true,
+      "password": "1234",
+      "id": 17
+    },
+    {
+      "FirstName": "Teddie",
+      "LastName": "Blank",
+      "UserName": "Blank",
+      "email": "Billy@gmail.com",
+      "is_active": true,
+      "password": "1234",
+      "id": 18
+    },
+    {
+      "first_name": "Stever",
+      "last_name": "Senft",
+      "username": "SSKK",
+      "password": "1234",
+      "address": "123 drive",
+      "id": 19
+    }
+  ],
+  "discs": [
+    {
+      "BagId": 1,
+      "userId": 1,
+      "Type": "dfgsgsrhg",
+      "Color": "sdgnjdgrno",
+      "Speed": 12,
+      "Glide": 1,
+      "Turn": 1,
+      "Fade": 1
+    }
+  ],
+  "messages": [
+    {
+      "CreatorId": 1,
+      "RecipientId": 1,
+      "RecipientGroupId": "dfgsgsrhg",
+      "Message": "Hello",
+      "CreatedAt": "2012-04-23T18:25:43.511Z",
+      "Glide": 1
+    }
+  ],
+  "games": [
+    {
+      "BagId": 1,
+      "userId": 1,
+      "Score": 564,
+      "ParkId": 4,
+      "CreatedAt": "2012-04-23T18:25:43.511Z"
+    },
+    {
+      "BagId": 1,
+      "userId": 1,
+      "Score": 564,
+      "ParkId": 4,
+      "CreatedAt": "2012-04-23T18:25:43.511Z"
+    },
+    {
+      "BagId": 1,
+      "userId": 1,
+      "Score": 564,
+      "ParkId": 4,
+      "CreatedAt": "2012-04-23T18:25:43.511Z"
+    }
+  ],
+  "bags": [
+    {
+      "userId": 18,
+      "Id": 1
+    }
+  ],
+  "groups": [
+    {
+      "Name": "birdieGroup",
+      "Id": 1,
+      "CreatedAt": "2012-04-23T18:25:43.511Z",
+      "is_active": true
+    },
+    {
+      "Name": "birdieGroup2",
+      "Id": 2,
+      "CreatedAt": "2012-04-23T18:25:43.511Z",
+      "is_active": true
+    },
+    {
+      "Name": "birdieGroup3",
+      "Id": 3,
+      "CreatedAt": "2012-04-23T18:25:43.511Z",
+      "is_active": true
+    },
+    {
+      "Name": "birdieGroup4",
+      "Id": 4,
+      "CreatedAt": "2012-04-23T18:25:43.511Z",
+      "is_active": true
+    }
+  ],
+  "parks": [
+    {
+      "Id": 18,
+      "Title": "17195175",
+      "Address": "Jeni's Splendid Ice Cream"
+    }
+  ],
+  "usergroups": [
+    {
+      "Id": 1,
+      "UserId": 18,
+      "GroupId": 1
+    }
+  ]
+}
