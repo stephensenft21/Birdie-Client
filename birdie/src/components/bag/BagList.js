@@ -1,14 +1,18 @@
 // populates list of products in individual category
 import React, { useState, useEffect } from "react";
 import API from "../../API/DataManager";
+import useSimpleAuth from '../auth/useSimpleAuth';
 
 const BagList = (props) => {
     const [bags, setBags] = useState([]);
 
     const getBags = () => {
-        return API.getAll().then((response) => {
-            setBags(response);
-        });
+        if((isAuthenticated()){
+
+             API.getAll().then((response) => {
+                setBags(response);
+            });
+        }
     };
 
     useEffect(() => {
