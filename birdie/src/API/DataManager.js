@@ -6,13 +6,15 @@ import {
 console.log(AuthApiUrl)
 let API = {
 
-    getOne: (resource, id) => {
+    getOne: (resource,id) => {
         // const authHeader = createAuthHeaders()
-        return fetch(`${AuthApiUrl}/${resource},${id}`, {
+        return fetch(`${AuthApiUrl}/${resource}/${id}`, {
             method: "GET",
-            // headers: authHeader
+           
         }).then(data => data.json())
-    },
+        
+    }, 
+    
     //https://localhost:5001/api/v1/Resource
     getAll: (resource) => {
         // const authHeader = createAuthHeaders()

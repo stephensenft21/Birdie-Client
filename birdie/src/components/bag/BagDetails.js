@@ -7,13 +7,13 @@ const BagDetail = props => {
 
     useEffect(() => {
         //get(id) from AnimalManager and hang on to the data; put it into state
-        API.getOne(props.animalId)
+        API.getOne("bags",props.bagId)
             .then(bag => {
                 setBag({
                     brand: bag.brand
                 });
             });
-    }, [props.animalId]);
+    }, [props.bagId]);
 
     return (
         <div className="card">
@@ -21,6 +21,7 @@ const BagDetail = props => {
                 <picture>
                     {/* <img src={require('./dog.svg')} alt="My Dog" /> */}
                 </picture>
+           {console.log(bag)}
                 <p>Brand: {bag.brand}</p>
             </div>
         </div>
