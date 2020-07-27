@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import API from "../../API/DataManager";
-import './AnimalDetail.css'
+
 
 const BagDetail = props => {
     const [bag, setBag] = useState({ brand: "" });
@@ -19,7 +19,7 @@ const BagDetail = props => {
         <div className="card">
             <div className="card-content">
                 <picture>
-                    <img src={require('./dog.svg')} alt="My Dog" />
+                    {/* <img src={require('./dog.svg')} alt="My Dog" /> */}
                 </picture>
                 <p>Brand: {bag.brand}</p>
             </div>
