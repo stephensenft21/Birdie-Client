@@ -42,7 +42,7 @@ const ApplicationViews = (props) => {
             }} />
             <Route path="/bags/:bagId(\d+)" render={(props) => {
                 // Pass the animalId to the AnimalDetailComponent
-                return <BagDetail bagId={parseInt(props.match.params.animalId)} />
+                return <BagDetail {...props} bagId={parseInt(props.match.params.bagId)} />
             }} />
         </>
     );
