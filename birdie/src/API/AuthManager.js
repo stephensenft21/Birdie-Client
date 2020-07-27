@@ -1,4 +1,4 @@
-const AuthApiUrl = "http://localhost:8088"
+export const AuthApiUrl = "http://localhost:8088"
 
 export default {
     registerUser(newUser) {

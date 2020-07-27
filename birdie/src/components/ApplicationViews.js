@@ -4,18 +4,20 @@ import Register from "./auth/Register";
 import Login from "./auth/Login";
 import Home from "./home/Home";
 import useSimpleAuth from "./auth/useSimpleAuth";
+import BagList from "../components/bag/BagList"
+import BagDetail from "../components/bag/BagDetails"
 
 const ApplicationViews = (props) => {
-    
+
     const { isAuthenticated } = useSimpleAuth();
 
     return (
         <>
             <Route
-                exact 
+                exact
                 path="/"
                 render={(props) => {
-                        return <Home {...props} />;
+                    return <Home {...props} />;
                 }}
             />
             <Route
@@ -32,6 +34,16 @@ const ApplicationViews = (props) => {
                     return <Login {...props} />;
                 }}
             />
+
+            {/* Routes For Bag List, Bag Details */}
+
+            <Route exact path="/bags" render={(props) => {
+                return <BagList />
+            }} />
+            <Route path="/bags/:bagId(\d+)" render={(props) => {
+                // Pass the animalId to the AnimalDetailComponent
+                return <BagDetail bagId={parseInt(props.match.params.animalId)} />
+            }} />
         </>
     );
 };
