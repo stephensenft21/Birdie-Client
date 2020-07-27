@@ -25,9 +25,9 @@ const BagList = (props) => {
             <div>
                 <h2>Your Bags</h2>
                 <div>
-                    {bags.map((bag) => (
-                        <BagListCard key={bag.id} bag={bag} {...props} />
-                    ))}
+                    {bags.map(((bag, id) => (
+                        <BagListCard  key={id} bag={bag} {...props} />
+                    )))}
                 </div>
             </div>
         </div>
