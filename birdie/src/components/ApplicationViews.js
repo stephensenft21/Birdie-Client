@@ -7,6 +7,7 @@ import useSimpleAuth from "./auth/useSimpleAuth";
 import BagList from "../components/bag/BagList"
 import BagDetail from "../components/bag/BagDetails"
 import deleteBag from "../components/bag/BagList"
+import BagEditForm from "../components/bag/BagEditForm"
 const ApplicationViews = (props) => {
 
     const { isAuthenticated } = useSimpleAuth();
@@ -36,22 +37,24 @@ const ApplicationViews = (props) => {
             />
 
             {/* Routes For Bag List, Bag Details, Bag Edit Form */}
-            
+
             <Route exact path="/bags/:bagId(\d+)" render={props => {
-                if (isAuthenticated()) {
-                    return <BagDetail bagId={parseInt(props.match.params.bagId)} {...props} />
-                } else {
-                    return <Redirect to="/login" />
-                }
+                return <BagDetail deleteBag={deleteBag} bagId={parseInt(props.match.params.bagId)} {...props} />
+                // if (isAuthenticated()) {
+                // } else {
+                //     return <Redirect to="/login" />
+                // }
             }} />
             <Route exact path="/bags" render={(props) => {
                 return <BagList />
             }} />
-            <Route path="/bags/:bagId(\d+)" render={(props) => {
-                // Pass the animalId to the AnimalDetailComponent
-                return <BagDetail deleteBag={deleteBag} {...props} bagId={parseInt(props.match.params.bagId)} />
+            <Route path="/bags/:bagId(\d+)/edit" render={props => {
+                return <BagEditForm bagId={parseInt(props.match.params.bagId)} {...props} />
+                // if (isAuthenticated()) {
+                // } else {
+                //     return <Redirect to="/login" />
+                // }
             }} />
-
         </>
     );
 };
