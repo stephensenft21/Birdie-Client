@@ -31,12 +31,17 @@ const BagDetail = props => {
 
     return (
         <div className="card">
+            <div>this is bag details</div>
             <div className="card-content">
                 <picture>
                     {/* <img src={require('./dog.svg')} alt="My Dog" /> */}
                 </picture>
                 <button type="button" onClick={() => deleteBag(props.bagId)}>Discharge</button>
                 <p>Brand: {bag.brand}</p>
+                <button type="button"
+                    onClick={() => props.history.push(`/bags/${props.bagId}/edit`)}>
+                    Edit
+</button>
             </div>
         </div>
     );
