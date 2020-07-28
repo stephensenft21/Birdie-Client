@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const BagCard = (props) => {
   return (
     <div className="card">
@@ -11,6 +11,7 @@ const BagCard = (props) => {
           Brand: <span className="card-petname">Doodles</span>
         </h3>
   <p>{props.brand}</p>
+
       </div>
     </div>
   );
