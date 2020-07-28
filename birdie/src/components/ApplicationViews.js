@@ -6,7 +6,7 @@ import Home from "./home/Home";
 import useSimpleAuth from "./auth/useSimpleAuth";
 import BagList from "../components/bag/BagList"
 import BagDetail from "../components/bag/BagDetails"
-
+import deleteBag from "../components/bag/BagList"
 const ApplicationViews = (props) => {
 
     const { isAuthenticated } = useSimpleAuth();
@@ -42,7 +42,7 @@ const ApplicationViews = (props) => {
             }} />
             <Route path="/bags/:bagId(\d+)" render={(props) => {
                 // Pass the animalId to the AnimalDetailComponent
-                return <BagDetail bagId={parseInt(props.match.params.animalId)} />
+                return <BagDetail deleteBag={deleteBag} {...props} bagId={parseInt(props.match.params.bagId)} />
             }} />
         </>
     );
