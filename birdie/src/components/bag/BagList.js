@@ -11,9 +11,9 @@ const BagList = (props) => {
         // if((isAuthenticated())){
 
         // }
-                 API.getAll("bags").then((response) => {
-                    setBags(response);
-                });
+        API.getAll("bags").then((response) => {
+            setBags(response);
+        });
     };
 
     useEffect(() => {
@@ -26,7 +26,7 @@ const BagList = (props) => {
                 <h2>Your Bags</h2>
                 <div>
                     {bags.map(((bag, id) => (
-                        <BagListCard  key={id} bag={bag} {...props} />
+                        <BagListCard key={id} bag={bag} {...props} />
                     )))}
                 </div>
             </div>
