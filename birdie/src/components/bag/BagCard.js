@@ -8,9 +8,9 @@ const BagCard = (props) => {
           {/* <img src={require("./dog.svg")} alt="My Dog" /> */}
         </picture>
         <h3>
-          Brand: <span className="card-petname">Doodles</span>
+          Brand: <span className="card-petname"></span>
         </h3>
-  <p>{props.brand}</p>
+  <a href={`bags/${props.bag.id}`}>{props.bag.brand}</a>
 
       </div>
     </div>

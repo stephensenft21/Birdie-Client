@@ -11,8 +11,8 @@ const BagDetail = props => {
         // if((isAuthenticated())){
 
         // }
-                
-        API.getOne("bags",props.bagId)
+
+        API.getOne("bags", props.bagId)
             .then(bag => {
                 setBag({
                     brand: bag.brand
@@ -28,15 +28,20 @@ const BagDetail = props => {
     useEffect(() => {
         getOneBag()
     }, [props.bagId]);
-    
+
     return (
         <div className="card">
+            <div>this is bag details</div>
             <div className="card-content">
                 <picture>
                     {/* <img src={require('./dog.svg')} alt="My Dog" /> */}
                 </picture>
                 <button type="button" onClick={() => deleteBag(props.bagId)}>Discharge</button>
                 <p>Brand: {bag.brand}</p>
+                <button type="button"
+                    onClick={() => props.history.push(`/bags/${props.bagId}/edit`)}>
+                    Edit
+</button>
             </div>
         </div>
     );
