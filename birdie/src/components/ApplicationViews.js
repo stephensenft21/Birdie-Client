@@ -10,7 +10,7 @@ import deleteBag from "../components/bag/BagList"
 import BagEditForm from "../components/bag/BagEditForm"
 const ApplicationViews = (props) => {
 
-    const { isAuthenticated } = useSimpleAuth();
+    // const { isAuthenticated } = useSimpleAuth();
 
     return (
         <>
