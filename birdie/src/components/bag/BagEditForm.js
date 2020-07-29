@@ -21,17 +21,17 @@ const BagEditForm = props => {
             id: props.match.params.bagId,
             brand: bag.brand,
         };
-        API.update("bags",editedbag.bagId)
+        API.update("bags", editedbag)
             .then(() => props.history.push("/bags"))
     }
 
     useEffect(() => {
-        API.getOne(props.match.params.bagId)
+        API.getOne("bags",props.match.params.bagId)
             .then(bag => {
                 setbag(bag);
                 setIsLoading(false);
             });
-    }, [props.match.params.bagId]);
+    }, []);
 
     return (
         <>
@@ -45,8 +45,8 @@ const BagEditForm = props => {
                             required
                             className="form-control"
                             onChange={handleFieldChange}
-                            id="name"
-                            value={bag.name}
+                            id="brand"
+                            value={bag.brand}
                         />
                         <label htmlFor="breed"> </label>
                     </div>

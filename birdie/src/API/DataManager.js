@@ -61,9 +61,9 @@ let API = {
         }).then(response => response.json())
 
     },
-    update(database,editedObject) {
+    update(resource,editedObject) {
         // const authHeader = createAuthHeaders()
-        return fetch(`${AuthApiUrl}/${database}/${editedObject.id}`, {
+        return fetch(`${AuthApiUrl}/${resource}/${editedObject.id}`, {
             method: "PUT",
             headers: {
                 // ...authHeader,
