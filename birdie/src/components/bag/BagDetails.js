@@ -20,7 +20,7 @@ const BagDetail = props => {
             });
     };
     const deleteBag = (id) => {
-        API.deleteUserData("bags", id).then(() => API.getAll().then(setBags)).then(props.history.push("/bags"));
+        API.deleteUserData("bags", id).then(() => API.getAll("bags").then(setBags)).then(props.history.push("/bags"));
     };
 
 
