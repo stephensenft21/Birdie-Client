@@ -4,12 +4,13 @@ import Register from "./auth/Register";
 import Login from "./auth/Login";
 import Home from "./home/Home";
 import useSimpleAuth from "./auth/useSimpleAuth";
-import BagList from "../components/bag/BagList"
-import BagDetail from "../components/bag/BagDetails"
-import deleteBag from "../components/bag/BagList"
-import BagEditForm from "../components/bag/BagEditForm"
-const ApplicationViews = (props) => {
+import BagList from "../components/bag/BagList";
+import BagDetail from "../components/bag/BagDetails";
+import deleteBag from "../components/bag/BagList";
+import BagEditForm from "../components/bag/BagEditForm";
+import BagForm from "../components/bag/BagForm";
 
+const ApplicationViews = (props) => {
     // const { isAuthenticated } = useSimpleAuth();
 
     return (
@@ -36,25 +37,53 @@ const ApplicationViews = (props) => {
                 }}
             />
 
-            {/* Routes For Bag List, Bag Details, Bag Edit Form */}
+            {/* Routes For Bag List, Bag Details, Bag Edit Form, Bag Form */}
 
-            <Route exact path="/bags/:bagId(\d+)" render={props => {
-                return <BagDetail deleteBag={deleteBag} bagId={parseInt(props.match.params.bagId)} {...props} />
-                // if (isAuthenticated()) {
-                // } else {
-                //     return <Redirect to="/login" />
-                // }
-            }} />
-            <Route exact path="/bags" render={(props) => {
-                return <BagList />
-            }} />
-            <Route path="/bags/:bagId(\d+)/edit" render={props => {
-                return <BagEditForm bagId={parseInt(props.match.params.bagId)} {...props} />
-                // if (isAuthenticated()) {
-                // } else {
-                //     return <Redirect to="/login" />
-                // }
-            }} />
+            <Route
+                exact
+                path="/bags/:bagId(\d+)"
+                render={(props) => {
+                    return (
+                        <BagDetail
+                            deleteBag={deleteBag}
+                            bagId={parseInt(props.match.params.bagId)}
+                            {...props}
+                        />
+                    );
+                    // if (isAuthenticated()) {
+                    // } else {
+                    //     return <Redirect to="/login" />
+                    // }
+                }}
+            />
+            <Route
+                exact
+                path="/bags"
+                render={(props) => {
+                    return <BagList />;
+                }}
+            />
+            <Route
+                path="/bags/:bagId(\d+)/edit"
+                render={(props) => {
+                    return (
+                        <BagEditForm
+                            bagId={parseInt(props.match.params.bagId)}
+                            {...props}
+                        />
+                    );
+                    // if (isAuthenticated()) {
+                    // } else {
+                    //     return <Redirect to="/login" />
+                    // }
+                }}
+            />
+            <Route
+                path="/bags/new"
+                render={(props) => {
+                    return <BagForm {...props} />;
+                }}
+            />
         </>
     );
 };
