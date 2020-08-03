@@ -35,22 +35,22 @@ let API = {
 //         }).then(data => data.json())
 //     },
 //     //(https://localhost:5001/api/v1/Compulsion/1?includes=records)
-//     PostData(resource, newObj) {
-//         const authHeader = createAuthHeaders()
-//         return fetch(`${AuthApiUrl}/${resource}`, {
-//             method: "POST",
-//             body: JSON.stringify(newObj),
-//             headers: {
-//                 ...authHeader,
-//                 Accept: 'application/json',
-//                 'Content-Type': 'application/json',
-//             },
-//             // method: "POST",
-//             // headers: authHeader,
+    PostData(resource, newObj) {
+        // const authHeader = createAuthHeaders()
+        return fetch(`${AuthApiUrl}/${resource}`, {
+            method: "POST",
+            body: JSON.stringify(newObj),
+            headers: {
+                // ...authHeader,
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+            // method: "POST",
+            // headers: authHeader,
 
-//             // body: JSON.stringify(newObj)
-//         }).then(response => response.json())
-//     },
+            // body: JSON.stringify(newObj)
+        }).then(response => response.json())
+    },
 
     deleteUserData(resource, Id) {
         // const authHeader = createAuthHeaders()
