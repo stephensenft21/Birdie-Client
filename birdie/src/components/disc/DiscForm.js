@@ -1,28 +1,27 @@
 import React, { useState } from 'react';
-import AnimalManager from '../../modules/AnimalManager';
-import './AnimalForm.css'
+import API from '../../modules/API';
 
-const AnimalForm = props => {
-  const [animal, setAnimal] = useState({ name: "", breed: "" });
+const DiskForm = props => {
+  const [disk, setdisk] = useState({ type: "", color: "", speed: 0 , glide: 0, Turn: 0, fade: 0 });
   const [isLoading, setIsLoading] = useState(false);
 
   const handleFieldChange = evt => {
-    const stateToChange = { ...animal };
+    const stateToChange = { ...disk };
     stateToChange[evt.target.id] = evt.target.value;
-    setAnimal(stateToChange);
+    setdisk(stateToChange);
   };
 
-  /*  Local method for validation, set loadingStatus, create animal      object, invoke the AnimalManager post method, and redirect to the full animal list
+  /*  Local method for validation, set loadingStatus, create disk      object, invoke the API post method, and redirect to the full disk list
   */
-  const constructNewAnimal = evt => {
+  const constructNewDisk = evt => {
     evt.preventDefault();
-    if (animal.name === "" || animal.breed === "") {
-      window.alert("Please input an animal name and breed");
+    if (disk.type === "" || disk.color === "", disk.speed === "" || disk.glide === "", disk.fade === "" || disk.turn === "") {
+      window.alert("Please fill out drops");
     } else {
       setIsLoading(true);
-      // Create the animal and redirect user to animal list
-      AnimalManager.post(animal)
-        .then(() => props.history.push("/animals"));
+      // Create the disk and redirect user to disk list
+      API.post(disk)
+        .then(() => props.history.push("/disks"));
     }
   };
 
@@ -52,7 +51,7 @@ const AnimalForm = props => {
             <button
               type="button"
               disabled={isLoading}
-              onClick={constructNewAnimal}
+              onClick={constructNewDisk}
             >Submit</button>
           </div>
         </fieldset>
@@ -61,4 +60,4 @@ const AnimalForm = props => {
   );
 };
 
-export default AnimalForm
+export default DiskForm
