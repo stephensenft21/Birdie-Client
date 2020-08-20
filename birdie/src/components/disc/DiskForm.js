@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import API from '../../modules/API';
-
+import React, { useState, useEffect } from 'react';
+import API from '../../API/DataManager';
+import { SimpleSelect } from "../MaterialComponents/MaterialSelect.js";
 
 const DiskForm = props => {
-  const [disk, setdisk] = useState({ type: "", color: "", speed: 0, glide: 0, Turn: 0, fade: 0 });
+  const [disk, setdisk] = useState({ });
   const [isLoading, setIsLoading] = useState(false);
 
   const handleFieldChange = evt => {
@@ -17,8 +17,8 @@ const DiskForm = props => {
     */
     const constructNewDisk = evt => {
       evt.preventDefault();
-      if (disk.type === "" || disk.color === "", disk.speed === "" || disk.glide === "", disk.fade === "" || disk.turn === "") {
-        window.alert("Please fill out drops");
+      if (disk.type === "" || disk.color === "" || disk.speed === "" || disk.glide === ""|| disk.fade === "" || disk.turn === "") {
+        window.alert("Please fill out dropdowns");
       } else {
         setIsLoading(true);
         // Create the disk and redirect user to disk list
@@ -27,28 +27,32 @@ const DiskForm = props => {
       }
     };
 
+    const getDisks = () => {
+      // After the data comes back from the API, we
+      //  use the setAnimals function to update state
+      return API.getAll("disks").then(data => {
+        setdisk(data)
+      });
+    };
+
+     useEffect(() => {
+      getDisks()
+     }, [])
+    
+
     return (
       <>
         <form>
+          <div>
+         
+          <SimpleSelect
+                  handleNumberfieldChange={props.handleNumberfieldChange}
+                 
+                  {...props}
+                  key={props.type}
+                />
+          </div>
           <fieldset>
-            <div className="formgrid">
-              <input
-                type="text"
-                required
-                onChange={handleFieldChange}
-                id="name"
-                placeholder="Animal name"
-              />
-              <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                required
-                onChange={handleFieldChange}
-                id="breed"
-                placeholder="Breed"
-              />
-              <label htmlFor="breed">Breed</label>
-            </div>
             <div className="alignRight">
               <button
                 type="button"

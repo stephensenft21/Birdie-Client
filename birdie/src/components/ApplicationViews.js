@@ -9,6 +9,7 @@ import BagDetail from "../components/bag/BagDetails";
 import deleteBag from "../components/bag/BagList";
 import BagEditForm from "../components/bag/BagEditForm";
 import BagForm from "../components/bag/BagForm";
+import DiskForm from "../components/disc/DiskForm";
 
 const ApplicationViews = (props) => {
     // const { isAuthenticated } = useSimpleAuth();
@@ -82,6 +83,12 @@ const ApplicationViews = (props) => {
                 path="/bags/new"
                 render={(props) => {
                     return <BagForm {...props} />;
+                }}
+            />
+            <Route
+                path="/disc/new"
+                render={(props) => {
+                    return <DiskForm {...props} />;
                 }}
             />
         </>

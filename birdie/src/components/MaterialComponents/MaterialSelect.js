@@ -37,11 +37,11 @@ export function SimpleSelect(props) {
                         props.handleNumberfieldChange(e);
                     }}
                 >
-                    {props.disk.map((disk, i) => (
+                    {/* {props.disk.map((disk, i) => (
                         <MenuItem key={i} value={disk.compulsionId}>
                             {disk.type}
                         </MenuItem>
-                    ))}
+                    ))} */}
                 </Select>
                 <FormHelperText>Select One</FormHelperText>
             </FormControl>
