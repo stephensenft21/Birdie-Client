@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import API from '../../API/DataManager';
 import { SimpleSelect } from "../MaterialComponents/MaterialSelect.js";
 
 const DiskForm = props => {
-  const [disk, setdisk] = useState({ });
+  const [disk, setdisk] = useState({ type: "", color: "", speed: 0, glide: 0, Turn: 0, fade: 0 });
   const [isLoading, setIsLoading] = useState(false);
 
   const handleFieldChange = evt => {
@@ -27,31 +27,10 @@ const DiskForm = props => {
       }
     };
 
-    const getDisks = () => {
-      // After the data comes back from the API, we
-      //  use the setAnimals function to update state
-      return API.getAll("disks").then(data => {
-        setdisk(data)
-      });
-    };
-
-     useEffect(() => {
-      getDisks()
-     }, [])
-    
-
     return (
       <>
         <form>
-          <div>
-         
-          <SimpleSelect
-                  handleNumberfieldChange={props.handleNumberfieldChange}
-                 
-                  {...props}
-                  key={props.type}
-                />
-          </div>
+        
           <fieldset>
             <div className="alignRight">
               <button
