@@ -11,6 +11,13 @@ const DiskForm = props => {
     stateToChange[evt.target.id] = evt.target.value;
     setdisk(stateToChange);
   };
+  const handleNumberfieldChange = evt => {
+    const stateToChange = {};
+    stateToChange[evt.target.id] = +evt.target.value;
+    props.setType(stateToChange);
+    this.props.history.push(`/Disk/${evt.target.value}`);
+  };
+
   
 
     /*  Local method for validation, set loadingStatus, create disk      object, invoke the API post method, and redirect to the full disk list
@@ -30,7 +37,11 @@ const DiskForm = props => {
     return (
       <>
         <form>
-        
+        <SimpleSelect
+                  handleNumberfieldChange={handleNumberfieldChange} 
+                  {...props}
+                
+                />
           <fieldset>
             <div className="alignRight">
               <button
